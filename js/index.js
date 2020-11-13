@@ -4,6 +4,7 @@ $(function () {
   });
 }); //]]>
 
+    document.getElementById('vid').play();
 
 $('button').click((e)=>{
     $('#title').html(e.target.innerHTML);
