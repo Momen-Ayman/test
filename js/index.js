@@ -4,15 +4,19 @@ $(function () {
   });
 }); //]]>
 
-    document.getElementById('vid').play();
-
+window.onload = function(){
+    $('#title').html(
+        $('.btn1').text()
+    )
+}
+    
 $('button').click((e)=>{
     $('#title').html(e.target.innerHTML);
     if(e.target.classList.value == "btn1"){
-        $('video').attr('src' , '');
+        $('video').attr('src' , '../Videos/1⃣4⃣.mp4');
     }
     else if(e.target.classList.value == "btn2"){
-        $('video').attr('src' , '');
+        $('video').attr('src' , '../Videos/1⃣4⃣.mp4');
     }
     else if(e.target.classList.value == "btn3"){
         $('video').attr('src' , '');
