@@ -1,0 +1,19 @@
+* {
+  direction: rtl;
+}
+#title{
+    color: blue;
+}
+video {
+  height: 70vh;
+}
+button {
+  border: none;
+  outline: none;
+  background-color: blue;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  width: 130px;
+}
