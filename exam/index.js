@@ -51,7 +51,7 @@ startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
-  alert("!انهي الامتحان");
+  alert("انتهي الامتحان !");
   window.location.href = "../index.html";
 }
 function closeMe()
