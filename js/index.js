@@ -6,6 +6,7 @@ $(function () {
 
 window.onload = function () {
   $("#title").html($(".btn1").text());
+  
 };
 
 $("button").click((e) => {

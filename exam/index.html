@@ -1,21 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/normalize.css" />
     <style>
-        body{
-            height: 100vh;
-        }
-        iframe{
-            width: 100%;
-            height: 100%;
-        }
+      body {
+        height: 100vh;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+      #app {
+        position: fixed;
+        top: 3%;
+        left: 3%;
+      }
+      .base-timer {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+
+      .base-timer__svg {
+        transform: scaleX(-1);
+      }
+
+      .base-timer__circle {
+        fill: none;
+        stroke: none;
+      }
+
+      .base-timer__path-elapsed {
+        stroke-width: 7px;
+        stroke: grey;
+      }
+
+      .base-timer__path-remaining {
+        stroke-width: 7px;
+        stroke-linecap: round;
+        transform: rotate(90deg);
+        transform-origin: center;
+        transition: 1s linear all;
+        fill-rule: nonzero;
+        stroke: currentColor;
+      }
+
+      .base-timer__path-remaining.green {
+        color: rgb(65, 184, 131);
+      }
+
+      .base-timer__path-remaining.orange {
+        color: orange;
+      }
+
+      .base-timer__path-remaining.red {
+        color: red;
+      }
+
+      .base-timer__label {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+      }
     </style>
-</head>
-<body>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScqqfo5Be7pO59KeWqDg-G_VY1dDFo2x1m-3o5qXBtKGOryRQ/viewform?fbclid=IwAR3pDCBnss1TJISTn5wCHGyPDVZojeW66rXUbUqD_zEiebZR8rTB38lXUws" frameborder="0"></iframe>
-</body>
+  </head>
+  <body>
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLScqqfo5Be7pO59KeWqDg-G_VY1dDFo2x1m-3o5qXBtKGOryRQ/viewform?fbclid=IwAR3pDCBnss1TJISTn5wCHGyPDVZojeW66rXUbUqD_zEiebZR8rTB38lXUws"
+      frameborder="0"
+    ></iframe>
+    <div id="app"></div>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
